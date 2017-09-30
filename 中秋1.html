@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css" />
+	<style type="text/css">
+		
+body{
+	background-image:url(img/3.jpg) ;
+}
+
+ .section{
+ 	background-image:url(img/a3.png);
+ 	overflow: hidden;
+ 	height: 610px;
+ }
+ .main img{
+ 	position: absolute;
+ }
+ .main{
+ 	width: 400px;
+ 	height: 610px;
+ 	position: relative;
+ 	margin: 20px auto;
+ 	overflow: hidden;
+ }
+ .music{
+ 	top: 26px;
+ 	right: 26px;
+ 	width: 40px;
+ 	height: 40px;
+ 	z-index: 999;
+ 	-webkit-animation:rotating 1.2s linear infinite;
+ }
+ @-webkit-keyframes rotating{
+ 	0%{
+ 		transform: rotate(0deg); 	}
+ 	100%{
+ 		transform: rotate(360deg);   }
+ 		
+ 	
+ }
+ /*灯笼女*/
+ .box1{
+ 	width: 470px;
+ 	height: 320px;
+ 	top: 314px;
+ 	left: 470px;
+ 	z-index: 9;
+ 	-webkit-transition: left 0.1s;
+ }
+ .active .box1{
+ 	left: -20px;
+ 	-webkit-transition:left 1s 0.2s linear;
+ }
+ /*大荷花*/
+ .box2{
+ 	width: 215px;
+ 	height: 220px;
+ 	top: 330px;
+ 	left: -420px;
+ 	-webkit-transition: left 0.1s;
+ }
+ .active .box2{
+ 	left: 0px;
+ 	-webkit-transition:left 1s 0.2s linear;
+ }
+ /*小荷花*/
+.box11{
+	width: 138px;
+	height: 59px;
+	right: -138px;
+	top: 275px;
+	-webkit-transition: right 0.1s;
+}
+.active .box11{
+	right: -40px;
+	-webkit-transition:right 1s 1.5s linear;
+}
+ /*荷花女*/
+ .box3{
+ 	width:155px;
+ 	height: 266px;
+ 	top: 246px;
+ 	left: -155px;
+ 	-webkit-transition: left 0.1s;
+ }
+ .active .box3{
+ 	left: 46px;
+ 	-webkit-transition:left 1s 0.2s linear;
+ 	}
+/*月亮组合*/ 	
+ .box4{
+ 	top: 300px;
+ 	width: 471px;
+ 	height: 294px;
+ 	left: -35px;
+ 	opacity: 0;
+ 	-webkit-transition: all 0.1s;
+ }	
+ .active .box4{
+ 	opacity: 1;
+ 	top: -10px;
+ 	-webkit-transition:all 1s 1s linear;
+ 	}	
+ /*月亮*/	
+ .box8{
+ 	width: 373px;
+ 	height: 404px;
+ 	left: 13px;
+ 	top: -96px;
+ 	opacity: 0;
+ 	-webkit-transition: opacity 0.1s;
+ }
+ .active .box8{
+ 	opacity: 1;
+ 	-webkit-transition:opacity 2s 2s linear;
+ 	}	
+ .box9{
+ 	width: 411px;
+ 	height: 400px;
+ 	top: -92px;
+ 	left: 6px;
+ 	opacity: 0;
+ 	-webkit-animation: hide 1s 10s linear infinite;
+ }	
+ @-webkit-keyframes hide{
+ 	0%{
+ 		opacity: 0;
+ 	}
+ 	25%{opacity: 0.1;}
+ 	50%{opacity: 0.2;}
+ 	75%{opacity: 0.3;}
+ 	100%{
+ 		opacity: 0.4;
+ 	}
+ }	
+ /*水流*/
+ .box10{
+ 	width: 101px;
+ 	height: 78px;
+ 	left: 170px;
+ 	top: 180px;
+ 	opacity: 0;
+ 	-webkit-transition:all 0.1s;
+ }	
+ .active .box10{
+ 	top: 260px;
+ 	opacity: 1;
+ 	-webkit-transition:all 1s 2s linear;
+ }
+ /*山花*/
+ .box5{
+ 	width: 111px;
+ 	height: 138px;
+ 	top: 430px;
+ 	right: -111px;
+ 	-webkit-transition: right 0.1s;
+ }	
+ .active .box5{
+ 	right: -20px;
+ 	-webkit-transition:right 1s 0.2s linear;
+ }
+ /*向左移动*/	
+ .box6{
+ 	width: 330px;
+ 	height: 654px;
+ 	top: 0px;
+ 	right: -400px;
+ 	-webkit-animation:pinyi 2s  2s linear infinite ;
+ }
+ /*向右移动*/
+ .box7{
+ 	width: 330px;
+ 	height: 654px;
+ 	top: 0px;
+ 	left:-400px ;
+ 	-webkit-animation:pinyi2 2s 2s  linear infinite ;
+ }
+ @-webkit-keyframes pinyi{
+ 	0%{
+ 		right: -400px;
+ 	}
+ 	25%{
+ 		right:-200px ;
+ 	}
+ 	50%{right: -50px;
+ 	   opacity: 0.8;
+ 	}
+ 	75%%{right: -300px;}
+ 	
+ 	100%{
+ 		right: -400px;
+ 	}
+ }
+ @-webkit-keyframes pinyi2{
+ 	0%{
+ 		left: -400px;
+ 	}
+ 	25%{
+ 		left:-200px ;
+ 	}
+ 	50%{left: -50px;
+ 	  opacity: 0.7;
+ 	}
+ 	75%{left: -300px;}
+ 	
+ 	100%{
+ 		left: -400px;
+ 	}
+ }
+ 
+	</style>
+	</head>
+	<body>
+		
+	<div class="main">
+	<div id="fullpage">
+		<audio id="mp3" src="media/刚好遇见你.mp3" autoplay="autoplay",ppreload=""></audio>
+	<div class="section">
+		
+		<img class="music" src="img/bg5.svg">
+		<img class="box10" src="img/a18.png">
+		<img class="box9" src="img/a27.png">
+		<img class="box4" src="img/a15.png">
+		<img class="box8" src="img/a10.png">
+		
+		<img class="box1" src="img/a8.png">
+		<img class="box2" src="img/a17.png">
+		<img class="box3" src="img/a16.png">
+		
+		<img class="box5"  src="img/a9.png">
+		
+		<img class="box6" src="img/a1.png">
+		<img class="box7" src="img/a2 (1).png">	
+		<img class="box11" src="img/a20.png">
+			
+		
+	</div>
+	<div class="section">第三</div>
+	<div class="section">第四</div>
+	<div class="section">
+		<div class="slide">第五1</div>
+		<div class="slide">第五2</div>
+		<div class="slide">第五3</div>
+		<div class="slide">第五4</div>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				$('#fullpage').fullpage({
+					// 内容是否垂直居中
+					verticalCentered: true,
+					// 字体是否随着窗口缩放而缩放
+					resize: true,
+					// 每一屏的背景色设置
+//					sectionsColor: ['red', 'green', "yellow", "blue", "pink"],
+					// 锚点
+					anchors: ["one", "two", "three", "four", "five"],
+					// 滚动速度
+					scrollingSpeed: 700,
+					// 定义它的滚动动画效果
+					css3: true,
+					easingcss3: 'ease',
+					// 是否显示项目导航
+					
+					// 导航左右位置设置
+					
+					
+					
+					afterLoad: function(anchorLink, index) {},
+					onLeave: function(index, nextIndex, direction) {
+					},
+					// 页面加载后的回调函数
+					afterRender: function() {
+		
+				},
+				});
+
+			});
+	
+	  var mp3=document.getElementById("mp3");
+		var music=document.getElementsByClassName("music")[0];
+		setInterval(function(){
+		   mp3.play();
+		},3000);
+		
+		music.onclick=function(){
+			if(mp3.paused){
+				mp3.play();
+				music.style.webkitAnimationPlayState="running";
+			}else{
+				mp3.pause();
+				music.style.webkitAnimationPlayState="paused";
+			}
+		}
+	</script>
+</body>
+</html>
